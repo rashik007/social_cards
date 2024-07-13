@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html,
+body {
+  font-family: "Roboto";
+}
+
 :root {
   --navy: #031a22;
+  --accent: #5765f2;
+  --button_hover: #6f7af5;
+  --react: #53c2de;
+}
+
+button {
+  outline: none;
 }
 
 .card-container {
@@ -17,7 +31,7 @@
     // justify-content: center;
     background: var(--navy);
     img {
-      width: 150px;
+      width: 110px;
       height: auto;
       // text-align: center;
     }
@@ -26,29 +40,107 @@
       color: white;
       margin: 0;
       font-size: 1.5rem;
+      font-weight: 500;
     }
   }
 
   .card-content {
     .sub_heading {
       font-size: 1rem;
+      font-weight: 600;
       margin: none;
+      color: var(--accent);
     }
     .main_heading {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin: none;
     }
   }
 }
 
+.card-wrapper {
+  margin: 30px;
+  display: flex;
+  // column-gap: 30px;
+  // row-gap: 30px;
+  flex: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .card-container {
+  }
+}
+
 .card-content {
   .feature_list {
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    flex: 1;
+    margin-top: 3rem;
 
     .single_list {
-      width: 50%;
+      width: calc(50% - 10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1rem;
+
+      svg {
+        font-size: 1.1rem;
+        margin-right: 0.1rem;
+        padding: 2px;
+      }
+
+      svg,
+      p {
+        line-height: 1.6;
+      }
+
+      &:nth-child(2n) {
+        margin-left: auto;
+      }
+      p {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+      }
     }
+  }
+}
+
+.btn_group {
+  margin-top: 1.5rem;
+  .cfa,
+  .dimmer {
+    outline: none;
+    border: none;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 0.8rem;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--button_hover);
+  }
+
+  &.dimmer {
+    padding: 10px 12px;
+  }
+
+  &.cfa {
+    padding: 10px 20px;
   }
 }
