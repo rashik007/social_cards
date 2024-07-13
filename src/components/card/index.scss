@@ -31,8 +31,8 @@ button {
     // justify-content: center;
     background: var(--navy);
     img {
-      width: 110px;
-      height: auto;
+      width: auto;
+      height: 100px;
       // text-align: center;
     }
 
@@ -61,6 +61,7 @@ button {
 .card-wrapper {
   margin: 30px;
   display: flex;
+  flex-direction: row;
   // column-gap: 30px;
   // row-gap: 30px;
   flex: auto;
